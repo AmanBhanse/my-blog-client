@@ -3,7 +3,6 @@
     grid-template-columns: 70vw;
     justify-content: center;
     align-items: center;
-
     text-align: left;
 }
 
@@ -29,4 +28,19 @@
 .nav-bar ul li a:hover {
     background-color: black;
     color: azure;
+}
+
+.article-list-container {
+    margin-top: 20px;
+}
+
+.articleList-singleArticleBody a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.articleList-singleArticleBody p {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
 }
