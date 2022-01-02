@@ -2,7 +2,7 @@ import React from "react";
 import articlesContent from "./ArticlesContent";
 import { Link } from "react-router-dom";
 
-function ArticlesList() {
+function ArticlesListPage() {
     return (
         <>
             <h2>List of Articles</h2>
@@ -22,4 +22,4 @@ function ArticlesList() {
     );
 }
 
-export default ArticlesList;
+export default ArticlesListPage;
