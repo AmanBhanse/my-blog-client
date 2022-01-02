@@ -1,13 +1,14 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import articlesContent from "./ArticlesContent";
+import NotFoundPage from "./NotFoundPage";
 
 function ArticlePage() {
     const { name } = useParams();
 
     const article = articlesContent.find((article) => article.name === name);
 
-    if (!article) return <h1>Oops! Article not found</h1>;
+    if (!article) return <NotFoundPage />;
     return (
         <>
             <h2>{article.title}</h2>
