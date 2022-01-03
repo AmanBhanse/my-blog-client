@@ -58,3 +58,19 @@
 .comment-container .comment-text {
     margin-left: 10px;
 }
+
+.upvote-section {
+    display: flex;
+    column-gap: 2%;
+}
+
+.upvote-section button {
+    background-color: black;
+    color: white;
+    transition-delay: 100ms;
+}
+
+.upvote-section button:hover {
+    background-color: greenyellow;
+    color: black;
+}

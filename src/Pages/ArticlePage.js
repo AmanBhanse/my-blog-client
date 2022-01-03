@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import articlesContent from "./ArticlesContent";
 import NotFoundPage from "./NotFoundPage";
 import CommentsList from "../components/CommentsList";
+import UpVotes from "../components/UpVotes";
 
 function ArticlePage() {
     const { name } = useParams();
@@ -16,6 +17,7 @@ function ArticlePage() {
             const result = await fetch(`/api/articles/${name}`);
             const body = await result.json();
             setArticleInfo({ ...body });
+            console.log("h");
         };
         fetchData();
     }, [name]);
@@ -25,7 +27,7 @@ function ArticlePage() {
     return (
         <>
             <h2>{article.title}</h2>
-            <p>This article has {articleInfo.upvotes} votes</p>
+            <UpVotes artcileName={name} articleInfo={articleInfo} setArticleInfo={setArticleInfo} />
             {article.content.map((paragraph, key) => {
                 return <p key={key}>{paragraph}</p>;
             })}
