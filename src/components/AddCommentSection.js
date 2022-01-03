@@ -24,20 +24,23 @@ function AddCommentSection({ articleName, setArticleInfo }) {
 
     return (
         <div className="add-comment-section">
-            <label>
-                Name:
+            <h3>Add Comment</h3>
+            <div className="property-value-container">
+                <label>Name:</label>
                 <input
+                    placeholder="enter user name"
                     type="text"
                     value={userName}
                     onChange={(event) => {
                         setUserName(event.target.value);
                     }}
                 />
-            </label>
+            </div>
 
-            <label>
-                Comment:
+            <div className="property-value-container">
+                <label>Comment:</label>
                 <textarea
+                    placeholder="enter comment here"
                     rows="4"
                     cols="50"
                     value={commentText}
@@ -45,8 +48,14 @@ function AddCommentSection({ articleName, setArticleInfo }) {
                         setCommentText(event.target.value);
                     }}
                 />
-            </label>
-            <button onClick={addComment}>Add Comment</button>
+            </div>
+            <button
+                id="add-comment-button"
+                disabled={!userName && !commentText}
+                onClick={addComment}
+            >
+                Add Comment
+            </button>
         </div>
     );
 }

@@ -1,3 +1,7 @@
+:root {
+    --section-bottom-margin: 20px;
+}
+
 .page-body {
     display: grid;
     grid-template-columns: 70vw;
@@ -45,6 +49,14 @@
     border-bottom: 3px solid black;
 }
 
+.articlePage-article-section {
+    margin-bottom: var(--section-bottom-margin);
+}
+
+.comments-list-section {
+    margin-bottom: var(--section-bottom-margin);
+}
+
 .comment-container {
     margin-bottom: 10px;
     border-bottom: 1px solid black;
@@ -68,9 +80,42 @@
     background-color: black;
     color: white;
     transition-delay: 100ms;
+    border-radius: 5px;
+    font-weight: 700;
 }
 
 .upvote-section button:hover {
+    background-color: greenyellow;
+    color: black;
+}
+
+.add-comment-section {
+    display: grid;
+    row-gap: 10px;
+    margin-bottom: var(--section-bottom-margin);
+}
+
+.property-value-container {
+    display: grid;
+    grid-template-columns: 50%;
+}
+
+.property-value-container input,
+textarea {
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+#add-comment-button {
+    border-radius: 5px;
+    width: 50%;
+    height: 30px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+}
+
+#add-comment-button:hover {
     background-color: greenyellow;
     color: black;
 }

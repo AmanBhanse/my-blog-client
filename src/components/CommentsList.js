@@ -23,7 +23,7 @@ function CommentsList({ comments }) {
     }
 
     return (
-        <div className="comments-list-wrapper">
+        <div className="comments-list-section">
             <h3>Comments</h3>
             {CommentsSection}
         </div>

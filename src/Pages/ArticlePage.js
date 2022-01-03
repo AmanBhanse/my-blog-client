@@ -27,11 +27,17 @@ function ArticlePage() {
 
     return (
         <>
-            <h2>{article.title}</h2>
-            <UpVotes artcileName={name} articleInfo={articleInfo} setArticleInfo={setArticleInfo} />
-            {article.content.map((paragraph, key) => {
-                return <p key={key}>{paragraph}</p>;
-            })}
+            <div className="articlePage-article-section">
+                <h2>{article.title}</h2>
+                <UpVotes
+                    artcileName={name}
+                    articleInfo={articleInfo}
+                    setArticleInfo={setArticleInfo}
+                />
+                {article.content.map((paragraph, key) => {
+                    return <p key={key}>{paragraph}</p>;
+                })}
+            </div>
             <CommentsList comments={articleInfo.comments} />
             <AddCommentSection articleName={name} setArticleInfo={setArticleInfo} />
         </>
