@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import articlesContent from "./ArticlesContent";
 import NotFoundPage from "./NotFoundPage";
+import CommentsList from "../components/CommentsList";
 
 function ArticlePage() {
     const { name } = useParams();
@@ -14,12 +15,13 @@ function ArticlePage() {
         const fetchData = async () => {
             const result = await fetch(`/api/articles/${name}`);
             const body = await result.json();
-            setArticleInfo(body);
+            setArticleInfo({ ...body });
         };
         fetchData();
     }, [name]);
 
     if (!article) return <NotFoundPage />;
+
     return (
         <>
             <h2>{article.title}</h2>
@@ -27,6 +29,7 @@ function ArticlePage() {
             {article.content.map((paragraph, key) => {
                 return <p key={key}>{paragraph}</p>;
             })}
+            <CommentsList comments={articleInfo.comments} />
         </>
     );
 }
