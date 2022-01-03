@@ -4,6 +4,7 @@ import articlesContent from "./ArticlesContent";
 import NotFoundPage from "./NotFoundPage";
 import CommentsList from "../components/CommentsList";
 import UpVotes from "../components/UpVotes";
+import AddCommentSection from "../components/AddCommentSection";
 
 function ArticlePage() {
     const { name } = useParams();
@@ -32,6 +33,7 @@ function ArticlePage() {
                 return <p key={key}>{paragraph}</p>;
             })}
             <CommentsList comments={articleInfo.comments} />
+            <AddCommentSection articleName={name} setArticleInfo={setArticleInfo} />
         </>
     );
 }
