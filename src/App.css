@@ -106,7 +106,7 @@ textarea {
     border-radius: 5px;
 }
 
-#add-comment-button {
+.add-comment-button {
     border-radius: 5px;
     width: 50%;
     height: 30px;
@@ -115,7 +115,34 @@ textarea {
     font-weight: 700;
 }
 
-#add-comment-button:hover {
+.add-comment-button:hover {
     background-color: greenyellow;
     color: black;
+}
+
+.about-page {
+    margin-top: 4vh;
+    display: grid;
+    grid-template-columns: 70vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-page-container {
+    text-align: left;
+}
+
+.about-page-link a {
+    position: relative;
+    top: -9px;
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+.article-list-page {
+    margin-top: 4vh;
+}
+
+.home-page {
+    margin-top: 4vh;
 }

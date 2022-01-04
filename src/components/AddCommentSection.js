@@ -49,11 +49,7 @@ function AddCommentSection({ articleName, setArticleInfo }) {
                     }}
                 />
             </div>
-            <button
-                id="add-comment-button"
-                disabled={!userName && !commentText}
-                onClick={addComment}
-            >
+            <button className="add-comment-button" onClick={addComment}>
                 Add Comment
             </button>
         </div>
